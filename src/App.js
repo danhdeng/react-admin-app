@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import { Admin, Resource, ListGuesser } from 'react-admin';
+import jsonServerProvider from 'ra-data-json-server';
+import { UserList } from "./users";
+import { PostList } from "./posts";
+import {ProductsList} from "./products";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const dataProvider = jsonServerProvider('https://fakestoreapi.com');
+// const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com/');
+// const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
+// const App = () => <Admin dataProvider={dataProvider} />;
+const App = () => (
+      <Admin dataProvider={dataProvider}>
+          <Resource name="Products" list={ProductsList} />
+          {/* <Resource name="posts" list={PostList} /> */}
+
+          {/* <Resource name="users" list={UserList} /> */}
+      </Admin>
+);
 
 export default App;
