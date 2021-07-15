@@ -1,3 +1,14 @@
+this project is implemented with react-admin library
+
+you can learn more about this library, the doucment and demo example from the links below
+
+https://marmelab.com/react-admin/
+
+**react-admin source code in github**
+
+https://github.com/marmelab/react-admin
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
